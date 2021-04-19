@@ -1,0 +1,24 @@
+def password(pas):
+    num = 0
+    low = 0
+    up = 0
+    sim = 0
+    for i in pas:
+        if i.isdigit():
+            num += 1
+    for i in pas:
+        if i.lower():
+            low += 1
+    for i in pas:
+        if i.isupper():
+            up += 1
+    for i in pas:
+        if i in '@#%&_':
+            sim += 1
+    if len(pas) >= 8 and up >= 1 and low >= 1 and num >= 1 and sim >= 1:
+        print('True')
+    else:
+        print('False')
+
+pas = input()
+password(pas)
