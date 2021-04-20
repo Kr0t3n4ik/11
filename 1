@@ -1,0 +1,21 @@
+users = {
+    'Artem': {
+        'physics': ["10", "9", "10"]
+    }
+}
+
+try:
+    name, item, value = input('Please input name of user and item then your ball').split()
+    value = int(value)
+    print(users[name][item][value])
+
+except KeyError:
+    print('You entered the wrong name or item')
+
+except ValueError:
+    print('You have not entered all the data')
+
+except IndexError:
+    print('Enter a number from 1 to 3 to find out your grade')
+    
+    
